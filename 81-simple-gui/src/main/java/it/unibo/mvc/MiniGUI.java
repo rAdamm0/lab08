@@ -10,6 +10,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Field;
 import java.util.Random;
 
 /**
@@ -50,7 +51,8 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(randomGenerator.nextInt());
+               text.setText(String.valueOf(randomGenerator.nextInt()));
+                System.out.println(text.getText());
             }
         });
     }
